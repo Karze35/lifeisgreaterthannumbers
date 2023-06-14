@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Film</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @font-face {
+      font-family: 'UtzingerThree';
+      src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
+    
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: UtzingerThree;
+			background-color: #314758;
+		}
+		
+		.header {
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 4vw;
+      font-weight: normal;
+      font-family: UtzingerThree;
+		}
+		
+		.navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #747474;
+			padding: 20px;
+			position: relative;
+			bottom: 0;
+			left: 20px;
+			right: 0;
+		}
+
+		.navigation > div {
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+			flex-basis: 0;
+			justify-content: center;
+			font-size: 20px;
+		}
+
+		.navigation > div:first-child {
+			justify-content: flex-start;
+		}
+
+		.navigation > div:last-child {
+			justify-content: flex-end;
+		}
+
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 10px;
+			transition: all 0.3s ease-in-out;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		.navigation a:hover {
+			background-color: #fff;
+			color: #333;
+			border-color: #333;
+		}
+
+		.navigation img {
+			max-width: 30px;
+			max-height: 30px;
+			margin-right: 10px;
+		}
+
+		.navigation small {
+			font-size: 12px;
+			color: #fff;
+			margin-left: 10px;
+		}
+
+    .image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 120px;
+      font-size: 36px;
+    }
+
+    .image-container img {
+      display: block;
+      width: 45%;
+      height: auto;
+    }
+
+    .image-container .overlay {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      height: 100%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding-top: 0%;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .sidebar {
+      height: 100%; 
+      width: 200px; 
+      position: fixed; 
+      z-index: 1; 
+      top: 0; 
+      left: 0;
+      background-color: #111; 
+      overflow-x: hidden; 
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;  
+      display: block;
+    }
+
+    .main {
+      margin-left: 160px; 
+      padding: 0px 10px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+
+    .sidebar-img {
+      max-width: 160px;
+      height: auto;
+    }
+
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
+    <a href="film.html">Film</a>
+    <a href="thoughts.html">Thoughts</a>
+    <a href="music.html">Music</a>
+    <a href="apparel.html">Apparel</a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a href="about.html">About</a>
+    <a href="imagelibrary.html">Image Library</a>
+    <a href="justforfun.html">Just For Fun</a>
+  </div>
+
+  <div class="main">
+    <h1 class="header">Storytelling For The Screen</h1>
+  
+    <div class="gallery">
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 1" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 1</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 2" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 2</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 3" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 3</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 4" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 4</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 5" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 5</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 6" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 6</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 7" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 7</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 8" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 8</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 9" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 9</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 10" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 10</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/1280x720" alt="Film Image 11" class="gallery-image">
+        <div class="overlay">
+          <p>Description of Film Image 11</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="navigation">
+      <div class="nav-segment">
+        <p class="nav-text">Life > Numbers</p>
+      </div>
+      <div class="nav-segment">
+        <a href="film.html"><p class="nav-text nav-active">film</p></a>
+        <a href="music.html"><p class="nav-text">music</p></a>
+        <a href="thoughts.html"><p class="nav-text">thoughts</p></a>
+        <a href="apparel.html"><p class="nav-text">apparel</p></a>
+      </div>
+      <div class="nav-segment">
+        <a href="about.html"><p class="nav-text">about</p></a>
+        <a href="imagelibrary.html"><p class="nav-text">image library</p></a>
+        <a href="justforfun.html"><p class="nav-text">just for fun</p></a>
+      </div>
+      <div class="nav-segment">
+        <img src="Assets/BrandingElements/LGN_trademarked logos-08.png" alt="Copyright">
+        <p class="nav-text">© 2022 all rights reserved</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>  
+
+
+    

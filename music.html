@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @font-face {
+      font-family: 'UtzingerThree';
+      src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: UtzingerThree;
+			background-color: #314758;
+		}
+		
+		.header {
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 60px;
+      font-weight: normal;
+      font-family: UtzingerThree;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.container img {
+			width: 70%;
+			height: auto;
+			opacity: 1;
+			transition: opacity 0.3s ease-in-out;
+			cursor: pointer;
+			margin: 10px;
+		}
+
+		.container img:hover {
+			opacity: 0.7;
+		}
+
+		.container .overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 24px;
+			padding: 20px;
+		}
+
+		.container img:hover + .overlay {
+			opacity: 1;
+		}
+		
+		.navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #747474;
+			padding: 20px;
+			position: relative;
+			bottom: 0;
+			left: 20px;
+			right: 0;
+		}
+
+		.navigation > div {
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+			flex-basis: 0;
+			justify-content: center;
+			font-size: 20px;
+		}
+
+		.navigation > div:first-child {
+			justify-content: flex-start;
+		}
+
+		.navigation > div:last-child {
+			justify-content: flex-end;
+		}
+
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 10px;
+			transition: all 0.3s ease-in-out;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		.navigation a:hover {
+			background-color: #fff;
+			color: #333;
+			border-color: #333;
+		}
+
+		.navigation img {
+			max-width: 30px;
+			max-height: 30px;
+			margin-right: 10px;
+		}
+
+		.navigation small {
+			font-size: 12px;
+			color: #fff;
+			margin-left: 10px;
+		}
+
+    .image-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 120px;
+      font-size: 36px;
+    }
+
+    .image-container img {
+      display: block;
+      width: 450px;
+      height: 450px;
+    }
+
+    .image-container .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 33.8%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 450px;
+      height: 450px;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding-top: 0%;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .image-text {
+      font-size: 36px;
+      margin-top: 5px;
+      text-align: center;
+      color:#fff;
+    }
+
+    .sidebar {
+      height: 100%; 
+      width: 200px; 
+      position: fixed; 
+      z-index: 1; 
+      top: 0; 
+      left: 0;
+      background-color: #111; 
+      overflow-x: hidden; 
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;  
+      display: block;
+    }
+
+    .main {
+      margin-left: 160px; 
+      padding: 0px 10px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidebar {padding-top: 15px;}
+      .sidebar a {font-size: 18px;}
+    }
+
+    .sidebar-img {
+      max-width: 160px;
+      height: auto;
+    }
+
+    .image-text {
+      position: relative;
+      display: inline-block;
+    }
+
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
+    <a href="film.html">Film</a>
+    <a href="thoughts.html">Thoughts</a>
+    <a href="music.html">Music</a>
+    <a href="apparel.html">Apparel</a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a href="about.html">About</a>
+    <a href="imagelibrary.html">Image Library</a>
+    <a href="justforfun.html">Just For Fun</a>
+  </div>
+
+  <div class="main">
+    <h1 class="header">Music</h1>
+  
+    <div class="gallery">
+      <div class="image-container">
+        <img src="https://via.placeholder.com/720x720" alt="Music Image 1" class="gallery-image">
+        <div class="overlay">
+          <p>Listen Now</p>
+        </div>
+        <div class="image-text">
+          <p>Title</p>
+          <p>Year Released</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/720x720" alt="Music Image 2" class="gallery-image">
+        <div class="overlay">
+          <p>Listen Now</p>
+        </div>
+        <div class="image-text">
+          <p>Title</p>
+          <p>Year Released</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/720x720" alt="Music Image 3" class="gallery-image">
+        <div class="overlay">
+          <p>Listen Now</p>
+        </div>
+        <div class="image-text">
+          <p>Title</p>
+          <p>Year Released</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/720x720" alt="Music Image 4" class="gallery-image">
+        <div class="overlay">
+          <p>Listen Now</p>
+        </div>
+        <div class="image-text">
+          <p>Title</p>
+          <p>Year Released</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="https://via.placeholder.com/720x720" alt="Music Image 5" class="gallery-image">
+        <div class="overlay">
+          <p>Listen Now</p>
+        </div>
+        <div class="image-text">
+          <p>Title</p>
+          <p>Year Released</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="navigation">
+      <div class="nav-segment">
+        <p class="nav-text">Life > Numbers</p>
+      </div>
+      <div class="nav-segment">
+        <a href="film.html"><p class="nav-text nav-active">film</p></a>
+        <a href="music.html"><p class="nav-text">music</p></a>
+        <a href="thoughts.html"><p class="nav-text">thoughts</p></a>
+        <a href="apparel.html"><p class="nav-text">apparel</p></a>
+      </div>
+      <div class="nav-segment">
+        <a href="about.html"><p class="nav-text">about</p></a>
+        <a href="imagelibrary.html"><p class="nav-text">image library</p></a>
+        <a href="justforfun.html"><p class="nav-text">just for fun</p></a>
+      </div>
+      <div class="nav-segment">
+        <img src="Assets/BrandingElements/LGN_trademarked logos-08.png" alt="Copyright">
+        <p class="nav-text">© 2022 all rights reserved</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>  
+
+
+    

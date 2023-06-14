@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@font-face {
+        font-family: 'UtzingerThree';
+        src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
+
+	html { 
+		background: url(Assets/BrandingElements/Layer0copy.png) no-repeat center center fixed; 
+		background-size: cover;
+	}
+	
+	body {
+		background-image: url(Assets/BrandingElements/Layer0copy.png);
+		background-size: 100%;
+		background-position: center;
+		margin: 0;
+		margin-top: 30%;
+		padding: 0;
+	}
+
+	#clickable-image {
+		position: fixed;
+		right: 20px;
+		bottom: 20px;
+		cursor: pointer;
+		width: 20%;
+		height: auto;
+	}
+</style>
+</head>
+<body>
+	<img id="clickable-image" src="Assets/BrandingElements/Artwork 10.png" alt="Next Page" onclick="window.location.href='nav1.html';">
+</body>
+</html>
