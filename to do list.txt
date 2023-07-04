@@ -1,0 +1,8 @@
+add images & links from resources document
+
+change apparel to support, and make it a "coming soon" thing
+
+make it as close to xd file as possible / optimize for mobile
+
+custom shaped logo buttonms
+
