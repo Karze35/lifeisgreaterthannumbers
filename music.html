@@ -136,12 +136,18 @@
       align-items: center;
       margin-bottom: 120px;
       font-size: 36px;
+      font-weight: bold;
     }
 
     .image-container img {
       display: block;
       width: 450px;
       height: 450px;
+      transition: opacity 0.5s ease;
+    }
+
+    .image-container:hover img {
+      opacity: 0.25; /* Set the desired opacity for the image on hover */
     }
 
     .image-container .overlay {
@@ -156,7 +162,7 @@
       width: 450px;
       height: 450px;
       opacity: 0;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0);
       color: #fff;
       text-align: center;
       padding-top: 0%;
@@ -187,6 +193,7 @@
       background-size: cover;
       overflow-x: hidden; 
       padding-top: 20px;
+      transition: width 0.3s;
     }
 
     .sidebar a {
@@ -202,14 +209,15 @@
       padding: 0px 10px;
     }
 
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidebar {padding-top: 15px;}
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
       .sidebar a {font-size: 18px;}
     }
 
     .sidebar-img {
-      max-width: 160px;
+      max-width: 100%;
       height: auto;
     }
 

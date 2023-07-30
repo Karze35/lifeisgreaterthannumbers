@@ -97,6 +97,7 @@
       background-size: cover;
       overflow-x: hidden; 
       padding-top: 20px;
+      transition: width 0.3s;
     }
 
     .sidebar a {
@@ -108,18 +109,19 @@
     }
 
     .main {
-      margin-left: 200px; 
+      margin-left: 160px; 
       padding: 0px 10px;
     }
 
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidebar {padding-top: 15px;}
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
       .sidebar a {font-size: 18px;}
     }
 
     .sidebar-img {
-      max-width: 160px;
+      max-width: 100%;
       height: auto;
     }
 

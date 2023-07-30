@@ -97,26 +97,24 @@
       height: 50vh;
       max-width: 1200px;
       margin: 0 auto;
-      margin-top: 5vh;  
+      margin-top: 5vh; 
     }
 
     .container img {
       grid-row: 1 / span 2;
       object-fit: cover;
       display: block;
-      width: 75%; 
-      height: auto; 
-      max-width: 350px;
+      max-width: 100%; /* Use relative units */
       max-height: 350px;
-      margin-right: 5vw; 
-      margin-bottom: 20vw;
+      margin-right: 2vw; /* Use relative units */
+      margin-bottom: 2vh; /* Use relative units */
     }
 
     .container h3 {
       color: #314758;
       margin-top: 0;
       margin-bottom: 10px;
-      margin-right: 4vw; 
+      margin-right: 2vw; 
       font-size: 3vw;
       font-weight: normal;
     }
@@ -131,7 +129,7 @@
       max-width: 600px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       /* Adjust styles for smaller screens */
       .container {
         grid-template-columns: 1fr; /* Change to a single column layout */
@@ -152,7 +150,6 @@
         margin-right: 0; /* Remove right margin */
         font-size: 4vw; /* Use relative units */
       }
-      
     }
 
     .sidebar {
@@ -166,6 +163,7 @@
       background-size: cover;
       overflow-x: hidden; 
       padding-top: 20px;
+      transition: width 0.3s;
     }
 
     .sidebar a {
@@ -181,14 +179,15 @@
       padding: 0px 10px;
     }
 
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidebar {padding-top: 15px;}
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
       .sidebar a {font-size: 18px;}
     }
 
     .sidebar-img {
-      max-width: 160px;
+      max-width: 100%;
       height: auto;
     }
 
