@@ -4,3 +4,5 @@ optimize for mobile
 
 custom shaped logo buttons
 
+fix the bottom bar because it is broken on a lot of screens
+
