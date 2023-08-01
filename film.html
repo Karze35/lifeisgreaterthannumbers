@@ -99,6 +99,11 @@
       display: block;
       width: 45%;
       height: auto;
+      transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover img {
+      opacity: 0.25; 
     }
 
     .image-container .overlay {
@@ -112,7 +117,7 @@
       width: 45%;
       height: 100%;
       opacity: 0;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0);
       color: #fff;
       text-align: center;
       padding-top: 0%;
