@@ -12,12 +12,6 @@ bottom bar
 - put it all at the bottom of the page
 - make it closer to xd file design
 
-film page 
-- text color
-- less text, add it all to overlay
-- overlay font sizing
-- image fill in the 16:9 ratio
-
 thoughts page
 - image broken
 - read more button redirects to a new page for each essay
