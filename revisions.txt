@@ -18,5 +18,6 @@ thoughts page
 image gallery
 - get images from karson and add them to the page
 
+i think the only funcitonality things I need to do still is small fixes for the sidebar & bottom menu, as well as some resizing for mobile. but besides that just making it look closer to the xd file
 
 
