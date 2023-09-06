@@ -1,10 +1,10 @@
 general
 - just make everything as close to xd as possible
 - more fade transitions
-- link open in new tab instead of replace
+- optimize for mobile
 
 navigation menu 
-- click to open
+- click to open/close
 - highlight text
 - transparent to background color
 
@@ -14,6 +14,10 @@ bottom bar
 
 thoughts page
 - image broken
-- read more button redirects to a new page for each essay
+
+image gallery
+- get images from karson and add them to the page
+
+i think the only funcitonality things I need to do still is small fixes for the sidebar & bottom menu, as well as some resizing for mobile. but besides that just making it look closer to the xd file
 
 
