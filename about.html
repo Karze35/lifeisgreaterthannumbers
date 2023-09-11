@@ -114,13 +114,6 @@
       padding: 0px 10px;
     }
 
-    @media (max-width: 767px) {
-      .sidebar {
-        width: 20%;
-      }
-      .sidebar a {font-size: 18px;}
-    }
-
     .sidebar-img {
       max-width: 100%;
       height: auto;
@@ -145,12 +138,30 @@
     }
 
     .body-text {
-      width: 40%;
+      width: 50%;
       margin: 0 auto;
       margin-bottom: 60px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifa;
-      font-size: 1.3vw;
+      font-size: 1.5vw;
       color:#5f5f5f;
+    }
+
+    @media (max-width: 1200px) {
+      .body-text {
+        width: 70%;
+        font-size: 2vw;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
+      .sidebar a {font-size: 18px;}
+      .body-text {
+        width: 80%;
+        font-size: 3vw;
+      }
     }
 
 </style>
