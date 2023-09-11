@@ -14,6 +14,7 @@
 			padding: 0;
 			font-family: UtzingerThree;
 			background-color: #b0cdd8;
+      overflow-x: hidden;
 		}
 		
 		.header {
@@ -99,7 +100,7 @@
 			margin-left: 10px;
 		}
 
-    .image-container {
+    .image-container { /* 1x square */
       position: relative;
       display: flex;
       flex-direction: column;
@@ -109,13 +110,13 @@
       font-size: 36px;
     }
 
-    .image-container img {
+    .image-container img { /* 1x square */
       display: block;
       width: 35%;
       height: auto;
     }
 
-    .image-container2 {
+    .image-container2 { /* 1x horizontal */
       position: relative;
       display: flex;
       flex-direction: column;
@@ -125,13 +126,13 @@
       font-size: 36px;
     }
 
-    .image-container2 img {
+    .image-container2 img { /* 1x horizontal */
       display: block;
       width: 50%;
       height: auto;
     }
 
-    .image-container3 {
+    .image-container3 { /* 1-2x vertical */
       position: relative;
       display: flex;
       justify-content: center;
@@ -141,7 +142,7 @@
       gap: 70px;
       }
 
-    .image-container3 img {
+    .image-container3 img { /* 1-2x vertical */
       display: block;
       width: 27%;
       height: auto;
@@ -179,6 +180,15 @@
         width: 20%;
       }
       .sidebar a {font-size: 18px;}
+      .image-container img {
+        width: 55%;
+      }
+      .image-container2 img {
+        width: 8%;
+      }
+      .image-container3 img {
+        width: 37%;
+      }
     }
 
     .sidebar-img {
@@ -214,15 +224,32 @@
     <p class="header2">a curated life moodboard</p>
   
     <div class="gallery">
-      <div class="image-container">
-        <img src="https://via.placeholder.com/720x720" class="gallery-image">
+      <div class="image-container3">
+        <img src="Assets/ImageLibrary/4A77A154-8872-4366-8455-F33C8DFCD31C@2x.png" class="gallery-image">
+        <img src="Assets/ImageLibrary/7A0A932F-79F6-40AA-A9D3-37EF2960FE76@2x.png" class="gallery-image">
       </div>
       <div class="image-container2">
-        <img src="https://via.placeholder.com/1280x720" class="gallery-image">
+        <img src="Assets/ImageLibrary/7B3C5304-3AF1-4797-B64B-7BE3CDF201F6@2x.png" class="gallery-image">
       </div>
       <div class="image-container3">
-        <img src="https://via.placeholder.com/960x1280" class="gallery-image">
-        <img src="https://via.placeholder.com/960x1280" class="gallery-image">
+        <img src="Assets/ImageLibrary/7C90E291-2983-4748-B99D-F863A2DC8A0C@2x.png" class="gallery-image">
+        <img src="Assets/ImageLibrary/90098CF7-CB0E-409E-975F-B724A7914858@2x.png" class="gallery-image">
+      </div>
+      <div class="image-container2">
+        <img src="Assets/ImageLibrary/9D102313-143D-4F94-B17D-AAF39629B4FD@2x.png" class="gallery-image">
+      </div>
+      <div class="image-container2">
+        <img src="Assets/ImageLibrary/63BCF034-A559-4DEA-A9D3-9A1FEF743A0F@2x.png" class="gallery-image">
+      </div>
+      <div class="image-container3">
+        <img src="Assets/ImageLibrary/BD660F9E-5A3D-4722-B6E7-4D09F347D825@2x.png" class="gallery-image">
+        <img src="Assets/ImageLibrary/D360B5F9-8677-4823-9759-D3FD4A2EB341@2x.png" class="gallery-image">
+      </div>
+      <div class="image-container2">
+        <img src="Assets/ImageLibrary/April06KarsonKarinBdayfamily 101@2x.png" class="gallery-image">
+      </div>
+      <div class="image-container3">
+        <img src="Assets/ImageLibrary/EA90E5F8-9A25-4CA2-96FB-1C4BBB696623@2x.png" class="gallery-image">
       </div>
     </div>
     
