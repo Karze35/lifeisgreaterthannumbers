@@ -1,8 +1,20 @@
-make it as close to xd file as possible
+general
+- just make everything as close to xd as possible
+- more fade transitions
+- optimize for mobile
+- custom shaped logo buttons
 
-optimize for mobile
+navigation menu 
+- click to open/close
+- transparent to background color
 
-custom shaped logo buttons
+bottom bar
+- put it all at the bottom of the page
+- make it closer to xd file design
 
-fix the bottom bar because it is broken on a lot of screens
+thoughts page
+- redesign format
+
+
+
 

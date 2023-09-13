@@ -14,14 +14,13 @@
 			padding: 0;
 			font-family: UtzingerThree;
 			background-color: #e7e9de;
-      overflow-x: hidden;
 		}
 		
 		.header {
 			color: #314758;
 			padding: 10px;
 			text-align: center;
-			font-size: 2.2vw;
+			font-size: 3vw;
       font-family: UtzingerThree;
       font-weight: normal;
       margin-left: 15%;
@@ -116,13 +115,6 @@
       padding: 0px 10px;
     }
 
-    @media (max-width: 767px) {
-      .sidebar {
-        width: 20%;
-      }
-      .sidebar a {font-size: 18px;}
-    }
-
     .sidebar-img {
       max-width: 100%;
       height: auto;
@@ -150,6 +142,7 @@
       width: 30%;
       margin: 0 auto;
       margin-bottom: 120px;
+      font-size: 1.5vw;
       font-family: 'Cambria';
       color:#5f5f5f;
     }
@@ -194,6 +187,27 @@
     .image-container:hover .overlay {
       opacity: 1;
       pointer-events: auto;
+    }
+
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
+      .sidebar a {font-size: 18px;}
+      .header {
+        font-size: 4vw;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .header {
+        font-size: 7vw;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      .main {
+        margin-left: 80px;
+      }
     }
 
 </style>

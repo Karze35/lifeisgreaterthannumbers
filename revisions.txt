@@ -15,8 +15,5 @@ bottom bar
 thoughts page
 - image broken
 
-image gallery
-- get images from karson and add them to the page
-
 
 
