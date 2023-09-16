@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Thoughts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    @font-face {
+      font-family: 'UtzingerThree';
+      src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: UtzingerThree;
+			background-color: #e7e9de;
+		}
+		
+		.header {
+			color: #314758;
+			padding: 20px;
+      margin-bottom: 4px;
+			text-align: center;
+      line-height: 1;
+			font-size: 2vw;
+      font-weight: normal;
+      font-family: UtzingerThree;
+      max-width: 68%;
+      margin: 0 auto;
+		}
+		
+		.navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #747474;
+			padding: 20px;
+			position: relative;
+			bottom: 0;
+			left: 20px;
+			right: 0;
+		}
+
+		.navigation > div {
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+			flex-basis: 0;
+			justify-content: center;
+			font-size: 20px;
+		}
+
+		.navigation > div:first-child {
+			justify-content: flex-start;
+		}
+
+		.navigation > div:last-child {
+			justify-content: flex-end;
+		}
+
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 10px;
+			transition: all 0.3s ease-in-out;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		.navigation a:hover {
+			background-color: #fff;
+			color: #333;
+			border-color: #333;
+		}
+
+		.navigation img {
+			max-width: 30px;
+			max-height: 30px;
+			margin-right: 10px;
+		}
+
+		.navigation small {
+			font-size: 12px;
+			color: #fff;
+			margin-left: 10px;
+		}
+
+    .container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-column-gap: 20px;
+      align-items: start;
+      justify-content: center;
+      height: 50vh;
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-top: 5vh; 
+    }
+
+    .container img {
+      grid-row: 1 / span 2;
+      object-fit: cover;
+      display: block;
+      max-width: 100%; /* Use relative units */
+      max-height: 350px;
+      margin-right: 2vw; /* Use relative units */
+      margin-bottom: 2vh; /* Use relative units */
+    }
+
+    .container h3 {
+      color: #314758;
+      margin-top: 0;
+      margin-bottom: 10px;
+      margin-right: 2vw; 
+      font-size: 3vw;
+      font-weight: normal;
+    }
+
+    .container p {
+      color: #314758;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 4vw; /* Use relative units */
+      font-size: 1vw;
+      font-weight: normal;
+      max-width: 600px;
+    }
+
+    @media (max-width: 900px) {
+      /* Adjust styles for smaller screens */
+      .container {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        grid-template-rows: auto auto 1fr; /* Add an extra row for the image */
+        height: auto; /* Adjust height automatically */
+        margin-top: 5%; /* Use relative units */
+        margin-bottom: 5%; /* Use relative units */
+      }
+
+      .container img {
+        grid-row: 2 / span 1; /* Update grid placement for the image */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 3vh; /* Use relative units */
+      }
+
+      .container h3 {
+        font-size: 6vw;
+      }
+      .container p {
+        margin-right: 0; /* Remove right margin */
+        font-size: 4vw; /* Use relative units */
+        margin-bottom: 120px;
+      }
+
+      .header {
+        font-size: 4vw;
+        max-width: 90%;
+      }
+    }
+
+    .sidebar {
+      height: 100%; 
+      width: 200px; 
+      position: fixed; 
+      z-index: 1; 
+      top: 0; 
+      left: 0;
+      background-image: url(Assets/MissingAssets/Side\ Menu\ BG@2x.png);
+      background-size: cover;
+      overflow-x: hidden; 
+      padding-top: 20px;
+      transition: width 0.3s;
+    }
+
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;  
+      display: block;
+    }
+
+    .main {
+      margin-left: 160px; 
+      padding: 0px 10px;
+    }
+
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
+      .sidebar a {font-size: 18px;}
+      .main {
+        margin-left: 80px;
+      }
+    }
+
+    .sidebar-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .image-text {
+      position: relative;
+      display: inline-block;
+    }
+
+    .paratext {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+</style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
+    <a href="film.html">Film</a>
+    <a href="thoughts.html">Thoughts</a>
+    <a href="music.html">Music</a>
+    <a href="support.html">Support</a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a href="about.html">About</a>
+    <a href="imagelibrary.html">Image Library</a>
+    <a href="justforfun.html">Just For Fun</a>
+  </div>
+
+  <div class="main">
+    <h1 class="header">the point of this page is to explore as a community. feel free to submit any short stories or thoughts that point to the good and simple. after a screening, they will be published anonymously here.</h1>
+
+    <div class="gallery">
+      <div class="container">
+        <img src="Assets/ThoughtsPDFs/Thoughts1@2x.png" class="gallery-image">
+        <h3>God is good, God is with me</h3>
+        <p class="paratext">Are You with me? Mom says so, but are You 
+          here? Dad doesn’t talk about you much, but he 
+          prays at dinner. Are you closer to some then to
+          others? They tell me to look for You in
+          everybody, but they also tell me to stay away 
+          from some. I don’t understand. The other day I 
+          listened to someone who doesn’t believe in 
+          You, and I really liked what He was saying. I saw 
+          You in Him. So why doesn’t He see You? Why 
+          don’t I always see You at church? And why does
+          mom tell me You’ll always give enough, when 
+          she’s always worried about money?
+
+          <span><a href="thoughts_godisgood.html">READ MORE</a></span>
+        </p>
+      </div>
+
+    <div class="gallery">
+      <div class="container">
+        <img src="Assets/ThoughtsPDFs/Thoughts2.png" class="gallery-image">
+        <h3>My Timeless Creator</h3>
+        <p class="paratext">My Timeless Creator. 
+          The story begins with an entity whose name cannot be pronounced. His form neither 
+          grand nor timid. His sense is that of one, He is all, therefore all is in Him, there is no separating 
+          my Creator from Himself. I call Him God, My Timeless Creator.
+          In the beginning my Timeless Creator thought His first thought, and it was the thought 
+          of Love. Love was His first creation. Within His Love He knew that to be loved He would have to 
+          create Lovers. He began with those by the name of angels- beings bound to His soul.
+
+          <span><a href="thoughts_mytimeslesscreator.html">READ MORE</a></span>
+        </p>
+      </div>
+
+    </div>
+    
+  </div>
+</body>
+</html>  
+
+
+    

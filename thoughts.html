@@ -22,7 +22,7 @@
       margin-bottom: 4px;
 			text-align: center;
       line-height: 1;
-			font-size: 2vw;
+			font-size: 2.4vw;
       font-weight: normal;
       font-family: UtzingerThree;
       max-width: 68%;
@@ -90,76 +90,45 @@
 		}
 
     .container {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      grid-template-rows: auto 1fr;
-      grid-column-gap: 20px;
-      align-items: start;
-      justify-content: center;
+      text-align: center;
       height: 50vh;
-      max-width: 1200px;
+      width: 80%;
       margin: 0 auto;
       margin-top: 5vh; 
+      margin-bottom: 25vh;
     }
 
     .container img {
-      grid-row: 1 / span 2;
       object-fit: cover;
       display: block;
-      max-width: 100%; /* Use relative units */
+      width: 30%;
       max-height: 350px;
-      margin-right: 2vw; /* Use relative units */
-      margin-bottom: 2vh; /* Use relative units */
+      margin: 0 auto;
     }
 
     .container h3 {
       color: #314758;
-      margin-top: 0;
-      margin-bottom: 10px;
-      margin-right: 2vw; 
+      margin: 0 auto;
       font-size: 3vw;
       font-weight: normal;
     }
 
     .container p {
-      color: #314758;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-right: 4vw; /* Use relative units */
-      font-size: 1vw;
+      color:#5f5f5f;
+      margin: 0 auto;
+      font-size: 1.2vw;
       font-weight: normal;
-      max-width: 600px;
+      width: 70%;
+      text-align: justify;
+      margin-bottom: 2vh;
     }
 
-    @media (max-width: 900px) {
-      /* Adjust styles for smaller screens */
-      .container {
-        grid-template-columns: 1fr; /* Change to a single column layout */
-        grid-template-rows: auto auto 1fr; /* Add an extra row for the image */
-        height: auto; /* Adjust height automatically */
-        margin-top: 5%; /* Use relative units */
-        margin-bottom: 5%; /* Use relative units */
-      }
-
-      .container img {
-        grid-row: 2 / span 1; /* Update grid placement for the image */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 3vh; /* Use relative units */
-      }
-
-      .container h3 {
-        font-size: 6vw;
-      }
-      .container p {
-        margin-right: 0; /* Remove right margin */
-        font-size: 4vw; /* Use relative units */
-        margin-bottom: 120px;
-      }
-
-      .header {
-        font-size: 4vw;
-        max-width: 90%;
-      }
+    .container p2 {
+      color:#5f5f5f;
+      margin: 0 auto;
+      font-size: 1.2vw;
+      font-weight: normal;
+      width: 70%;
     }
 
     .sidebar {
@@ -189,16 +158,6 @@
       padding: 0px 10px;
     }
 
-    @media (max-width: 767px) {
-      .sidebar {
-        width: 20%;
-      }
-      .sidebar a {font-size: 18px;}
-      .main {
-        margin-left: 80px;
-      }
-    }
-
     .sidebar-img {
       max-width: 100%;
       height: auto;
@@ -211,6 +170,66 @@
 
     .paratext {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1.5vh;
+    }
+
+    @media (max-width: 1200px) {
+      .container p {
+        width: 70%;
+        font-size: 2vw;
+      }
+      .container p2 {
+        width: 70%;
+        font-size: 2vw;
+      }
+      .container h3 {
+        font-size: 5vw;
+      }
+      .container img {
+        width: 50%;
+      }
+      .container {
+        margin-bottom: 48vh;
+      }
+      .header {
+        font-size: 3.5vw;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .sidebar {
+        width: 20%;
+      }
+      .sidebar a {font-size: 18px;}
+      .main {
+        margin-left: 110px;
+      }
+      .container p {
+        width: 90%;
+        font-size: 3.5vw;
+      }
+      .container p2 {
+        width: 85%;
+        font-size: 3.5vw;
+      }
+      .container h3 {
+        font-size: 7vw;
+      }
+      .container img {
+        width: 70%;
+      }
+      .container {
+        margin-bottom: 75vh;
+      }
+      .header {
+        font-size: 5vw;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        margin-bottom: 40vh;
+      }
     }
 
 </style>
@@ -251,8 +270,8 @@
           mom tell me You’ll always give enough, when 
           she’s always worried about money?
 
-          <span><a href="thoughts_godisgood.html">READ MORE</a></span>
         </p>
+        <p2 class="paratext"><a href="thoughts_godisgood.html">READ MORE</a></p2>
       </div>
 
     <div class="gallery">
@@ -267,8 +286,8 @@
           of Love. Love was His first creation. Within His Love He knew that to be loved He would have to 
           create Lovers. He began with those by the name of angels- beings bound to His soul.
 
-          <span><a href="thoughts_mytimeslesscreator.html">READ MORE</a></span>
         </p>
+        <p2 class="paratext"><a href="thoughts_mytimeslesscreator.html">READ MORE</a></p2>
       </div>
 
     </div>

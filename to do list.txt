@@ -12,9 +12,6 @@ bottom bar
 - put it all at the bottom of the page
 - make it closer to xd file design
 
-thoughts page
-- redesign format
-
 
 
 
