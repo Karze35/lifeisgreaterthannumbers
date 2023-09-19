@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test</title>
+    <style>
+        @font-face {
+            font-family: 'UtzingerThree';
+            src: url(Assets/UtzingerThree.otf) format('opentype');
+        }
+
+        body {
+			background-color: #F5F5F5;
+            font-family: UtzingerThree;
+            text-align: center;
+            font-size: 10vh;
+
+            background-image: url(Assets/MissingAssets/Buttons\ BG.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 5vw;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header-img {
+            max-width: 22%;
+            height: auto;
+        }
+
+        .image-map {
+            position: relative;
+            width: 30%;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .music-button {
+            left: 70%;
+            top: 8%;
+            width: 20%;
+            height: 40%;
+            background-color: rgba(0, 0, 0, 0);
+
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .film-button {
+            left: 30%;
+            top: 69%;
+            width: 60%;
+            height: 20%;
+            background-color: rgba(0, 0, 0, 0);
+
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-button {
+            left: 5%;
+            top: 33%;
+            width: 20%;
+            height: 32%;
+            background-color: rgba(0, 0, 0, 0);
+
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .thoughts-button {
+            left: 5%;
+            top: 8%;
+            width: 85%;
+            height: 85%;
+            background-color: rgba(0, 0, 0, 0);
+            
+            position: absolute;
+            z-index: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Text styles */
+        .button-text {
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            top: 50%; /* Vertically centered */
+            transform: translateY(-50%);
+            color: #314758;
+            transition: opacity 0.3s ease;
+
+            margin-top: 55%;
+        }
+
+        /* Hover styles */
+        .button-container:hover .button-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-map">
+        <img src="Assets/BrandingElements/LGN_trademarked logos-10.png" style="width: 100%; height: auto;">
+        <div class="button-container">
+            <a href="music.html"><div class="music-button"></div></a>
+            <p class="button-text">Music</p>
+        </div>
+        <div class="button-container">
+            <a href="film.html"><div class="film-button"></div></a>
+            <p class="button-text">Film</p>
+        </div>
+        <div class="button-container">
+            <a href="support.html"><div class="support-button"></div></a>
+            <p class="button-text">Support</p>
+        </div>
+        <div class="button-container">
+            <a href="thoughts.html"><div class="thoughts-button"></div></a>
+            <p class="button-text">Thoughts</p>
+        </div>
+    </div>
+</body>
+</html>

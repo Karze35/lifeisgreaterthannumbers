@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Test</title>
+<style>
+    .image-map {
+        position: relative;
+        width: 30%;
+    }
+
+    .music-button {
+        position: absolute;
+        left: 70%;
+        top: 8%;
+        width: 20%;
+        height: 40%;
+        background-color: rgba(0, 0, 0, .25);
+
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .film-button {
+        position: absolute;
+        left: 30%;
+        top: 73%;
+        width: 60%;
+        height: 20%;
+        background-color: rgba(0, 0, 0, .25);
+
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .support-button {
+        position: absolute;
+        left: 5%;
+        top: 33%;
+        width: 20%;
+        height: 32%;
+        background-color: rgba(0, 0, 0, .25);
+
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .thoughts-button {
+        position: absolute;
+        left: 5%;
+        top: 8%;
+        width: 85%;
+        height: 85%;
+        background-color: rgba(0, 0, 0, .10);
+
+        z-index: 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-text {
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 50%; 
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0);
+        transition: opacity 0.3s ease;
+    }
+
+    .music-button:hover + .button-text-music,
+    .film-button:hover + .button-text-film,
+    .support-button:hover + .button-text-support,
+    .thoughts-button:hover + .button-text-thoughts {
+        opacity: 1;
+    }
+
+    .music-button:hover,
+    .film-button:hover,
+    .support-button:hover,
+    .thoughts-button:hover {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+</style>
+</head>
+
+<body>
+    <div class="image-map">
+        <img src="Assets/BrandingElements/LGN_trademarked logos-10.png" style="width: 100%; height: auto;">
+        <a href="music.html"><div class="music-button"></div></a>
+        <a href="film.html"><div class="film-button"></div></a>
+        <a href="support.html"><div class="support-button"></div></a>
+        <a href="thoughts.html"><div class="thoughts-button"></div></a>
+
+        <p class="button-text button-text-music">Music</p>
+        <p class="button-text button-text-film">Film</p>
+        <p class="button-text button-text-support">Support</p>
+        <p class="button-text button-text-thoughts">Thoughts</p>
+    </div>
+</body>
+</html>
