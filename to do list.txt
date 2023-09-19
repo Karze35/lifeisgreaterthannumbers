@@ -1,5 +1,5 @@
 general
-- just make everything as close to xd as possible
+- make everything as close to xd as possible
 - more fade transitions
 - optimize for mobile
 
@@ -11,6 +11,8 @@ bottom bar
 - put it all at the bottom of the page
 - make it closer to xd file design
 
-
-
-
+other
+- fix strange hover hitbox on film/music pages
+- fix images on thoughts page being cut off
+- fix font issues
+- add a bottom margin to all pages
