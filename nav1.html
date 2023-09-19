@@ -1,110 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Life > Numbers</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	@font-face {
-		font-family: 'UtzingerThree';
-		src: url(Assets/UtzingerThree.otf) format('opentype');
-	}
-	
-	body {
-		background-color: #F5F5F5;
-		font-family: UtzingerThree;
-		text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test</title>
+    <style>
+        @font-face {
+            font-family: 'UtzingerThree';
+            src: url(Assets/UtzingerThree.otf) format('opentype');
+        }
 
-		background-image: url(Assets/MissingAssets/Buttons\ BG.png);
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: 100% 100%;
-		margin: 0;
-		padding: 0;
-		min-height: 100vh;
-	}
+        body {
+			background-color: #F5F5F5;
+            font-family: UtzingerThree;
+            text-align: center;
+            font-size: 10vh;
 
-	h1 {
-		margin-top: 50px;
-		font-size: 5vw;
-		font-weight: normal;
-		color: #333;
-	}
+            background-image: url(Assets/MissingAssets/Buttons\ BG.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
 
-	.header-img {
-		max-width: 22%;
-		height: auto;
-	}
+        h1 {
+            margin-top: 20px;
+            font-size: 5vw;
+            font-weight: normal;
+            color: #426077;
+        }
 
-	.container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		margin-top: 50px;
-	}
+        .header-img {
+            max-width: 22%;
+            height: auto;
+        }
 
-	.btn {
-		display: inline-block;
-		padding: 20px 30px;
-		margin: 20px;
-		border-radius: 10px;
-		font-size: 24px;
-		font-weight: bold;
-		text-transform: uppercase;
-		color: #fff;
-		background-color: #333;
-		transition: background-color 0.5s ease;
-		text-decoration: none;
-	}
+        .image-map {
+            position: relative;
+            width: 25%;
 
-	.btn:hover {
-		background-color: #7b7c94;
-		cursor: pointer;
-	}
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+        }
 
-	.film {
-		background-size: cover;
-		background-position: center;
-	}
+        img {
+            width: 100%;
+            height: auto;
+        }
 
-	.thoughts {
-		background-size: cover;
-		background-position: center;
-	}
+        .button-container {
+            width: 100%;
+            height: 100%;
+        }
 
-	.support {
-		background-size: cover;
-		background-position: center;
-	}
+        .music-button {
+            left: 66%;
+            top: 5%;
+            width: 25%;
+            height: 44%;
+            background-color: rgba(0, 0, 0, 0);
 
-	.music {
-		background-size: cover;
-		background-position: center;
-	}
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
 
-	@media (max-width: 900px) {
-		body {
-			background-size: 250%;
-		}
-		.header-img {
-			max-width: 40%;
-		}
-		h1 {
-			font-size: 8vw;
-		}
-		
-    }
+        .film-button {
+            left: 30%;
+            top: 64%;
+            width: 60%;
+            height: 25%;
+            background-color: rgba(0, 0, 0, 0);
 
-</style>
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-button {
+            left: 0%;
+            top: 28%;
+            width: 30%;
+            height: 38%;
+            background-color: rgba(0, 0, 0, 0);
+
+            position: absolute;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .thoughts-button {
+            left: 5%;
+            top: 8%;
+            width: 85%;
+            height: 85%;
+            background-color: rgba(0, 0, 0, 0);
+            
+            position: absolute;
+            z-index: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-text {
+            text-align: center;
+            opacity: 0;
+            position: absolute;
+            width: 100%;
+            top: 50%; 
+            transform: translateY(-50%);
+            color: #314758;
+            transition: opacity 0.25s ease;
+
+            margin-top: 55%;
+        }
+
+        .button-overlay {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .button-container:hover .button-text {
+            opacity: 1;
+        }
+
+        .button-container:hover .button-overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
-	<h1>Life > Numbers</h1>
-    <img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="header-img">
-	<div class="container">
-		<a href="film.html" class="btn film">Film</a>
-		<a href="thoughts.html" class="btn thoughts">Thoughts</a>
-		<a href="support.html" class="btn support">Support</a>
-		<a href="music.html" class="btn music">Music</a>
-	</div>
+    <h1>life > numbers</h1>
+
+    <div class="image-map">
+        <img src="Assets/BrandingElements/LGN_trademarked logos-10.png" style="width: 100%; height: auto;">
+        <div class="button-container">
+            <a href="music.html"><div class="music-button"></div></a>
+            <img src="Assets/BrandingElements/LGN buttons/LGN music.png" class="button-overlay" style="width: 100%; height: auto;">
+            <p class="button-text">Music</p>
+        </div>
+        <div class="button-container">
+            <a href="film.html"><div class="film-button"></div></a>
+            <img src="Assets/BrandingElements/LGN buttons/LGN film.png" class="button-overlay" style="width: 100%; height: auto;">
+            <p class="button-text">Film</p>
+        </div>
+        <div class="button-container">
+            <a href="support.html"><div class="support-button"></div></a>
+            <img src="Assets/BrandingElements/LGN buttons/LGN support.png" class="button-overlay" style="width: 100%; height: auto;">
+            <p class="button-text">Support</p>
+        </div>
+        <div class="button-container">
+            <a href="thoughts.html"><div class="thoughts-button"></div></a>
+            <img src="Assets/BrandingElements/LGN buttons/LGN thoughts.png" class="button-overlay" style="width: 100%; height: auto;">
+            <p class="button-text">Thoughts</p>
+        </div>
+    </div>
 </body>
 </html>

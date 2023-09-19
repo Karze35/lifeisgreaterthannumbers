@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Life > Numbers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@font-face {
+		font-family: 'UtzingerThree';
+		src: url(Assets/UtzingerThree.otf) format('opentype');
+	}
+	
+	body {
+		background-color: #F5F5F5;
+		font-family: UtzingerThree;
+		text-align: center;
+
+		background-image: url(Assets/MissingAssets/Buttons\ BG.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+	}
+
+	h1 {
+		margin-top: 50px;
+		font-size: 5vw;
+		font-weight: normal;
+		color: #333;
+	}
+
+	.header-img {
+		max-width: 22%;
+		height: auto;
+	}
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin-top: 50px;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 20px 30px;
+		margin: 20px;
+		border-radius: 10px;
+		font-size: 24px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #333;
+		transition: background-color 0.5s ease;
+		text-decoration: none;
+	}
+
+	.btn:hover {
+		background-color: #7b7c94;
+		cursor: pointer;
+	}
+
+	.film {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.thoughts {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.support {
+		background-size: cover;
+		background-position: center;
+	}
+
+	.music {
+		background-size: cover;
+		background-position: center;
+	}
+
+	@media (max-width: 900px) {
+		body {
+			background-size: 250%;
+		}
+		.header-img {
+			max-width: 40%;
+		}
+		h1 {
+			font-size: 8vw;
+		}
+		
+    }
+
+</style>
+</head>
+<body>
+	<h1>Life > Numbers</h1>
+    <img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="header-img">
+	<div class="container">
+		<a href="film.html" class="btn film">Film</a>
+		<a href="thoughts.html" class="btn thoughts">Thoughts</a>
+		<a href="support.html" class="btn support">Support</a>
+		<a href="music.html" class="btn music">Music</a>
+	</div>
+</body>
+</html>
