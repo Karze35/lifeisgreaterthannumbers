@@ -14,6 +14,7 @@
 			padding: 0;
 			font-family: UtzingerThree;
 			background-color: #e7e9de;
+      margin-bottom: 300px;
 		}
 		
 		.header {
@@ -99,25 +100,50 @@
       background-size: cover;
       overflow-x: hidden; 
       padding-top: 20px;
-      transition: width 0.3s;
+      transition: linear width 0.15s;
     }
 
     .sidebar a {
       padding: 6px 8px 6px 16px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 35px;
       color: #fff;  
       display: block;
     }
 
-    .main {
-      margin-left: 160px; 
-      padding: 0px 10px;
+    .sidebar a:hover {
+      color: #333; 
     }
 
     .sidebar-img {
       max-width: 100%;
       height: auto;
+      margin-top: 20%;
+    }
+
+    .toggle-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 40px;
+      background: none;
+      border: none;
+      color: #354e60;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .sidebar.open {
+      width: 300px; 
+    }
+
+    .sidebar:not(.open) {
+      width: 0;
+      overflow: hidden;
+    }
+
+    .main {
+      padding: 0px 10px;
     }
 
     .image-text {
@@ -190,10 +216,12 @@
     }
 
     @media (max-width: 767px) {
-      .sidebar {
-        width: 20%;
+      .sidebar.open {
+        width: 40%;
       }
-      .sidebar a {font-size: 18px;}
+      .sidebar a {
+        font-size: 25px;
+      }
       .header {
         font-size: 4vw;
       }
@@ -205,14 +233,12 @@
         margin-left: 2%;
         margin-right: 2%;
       }
-      .main {
-        margin-left: 80px;
-      }
     }
 
 </style>
 </head>
 <body>
+  <button class="toggle-button" onclick="toggleSidebar()">&#9776;</button>
   <div class="sidebar">
     <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
     <a href="film.html">Film</a>
@@ -247,6 +273,12 @@
     </div>
     
   </div>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>  
 

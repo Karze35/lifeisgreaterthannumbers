@@ -3,16 +3,10 @@ general
 - more fade transitions
 - optimize for mobile
 
-navigation menu 
-- click to open/close
-- transparent to background color
-
 bottom bar
 - put it all at the bottom of the page
 - make it closer to xd file design
 
 other
 - fix strange hover hitbox on film/music pages
-- fix images on thoughts page being cut off
 - fix font issues
-- add a bottom margin to all pages
