@@ -1,180 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life > Numbers</title>
-    <style>
-        @font-face {
-            font-family: 'UtzingerThree';
-            src: url(Assets/UtzingerThree.otf) format('opentype');
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life > Numbers</title>
+<link rel="stylesheet" href="fade.css">
+<style>
+    @font-face {
+        font-family: 'UtzingerThree';
+        src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
 
-        body {
-			background-color: #F5F5F5;
-            font-family: UtzingerThree;
-            text-align: center;
-            font-size: 10vh;
+    body {
+        background-color: #F5F5F5;
+        font-family: UtzingerThree;
+        text-align: center;
+        font-size: 10vh;
 
-            background-image: url(Assets/MissingAssets/Buttons\ BG.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
+        background-image: url(Assets/MissingAssets/Buttons\ BG.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
 
-        h1 {
-            margin-top: 20px;
-            font-size: 5vw;
-            font-weight: normal;
-            color: #426077;
-        }
+    h1 {
+        margin-top: 20px;
+        font-size: 5vw;
+        font-weight: normal;
+        color: #426077;
+    }
 
-        .header-img {
-            max-width: 22%;
-            height: auto;
-        }
+    .header-img {
+        max-width: 22%;
+        height: auto;
+    }
 
+    .image-map {
+        position: relative;
+        width: 25%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .music-button {
+        left: 66%;
+        top: 5%;
+        width: 25%;
+        height: 44%;
+        background-color: rgba(0, 0, 0, 0);
+
+        position: absolute;
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .film-button {
+        left: 30%;
+        top: 64%;
+        width: 60%;
+        height: 25%;
+        background-color: rgba(0, 0, 0, 0);
+
+        position: absolute;
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .support-button {
+        left: 0%;
+        top: 28%;
+        width: 30%;
+        height: 38%;
+        background-color: rgba(0, 0, 0, 0);
+
+        position: absolute;
+        z-index: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .thoughts-button {
+        left: 5%;
+        top: 8%;
+        width: 85%;
+        height: 85%;
+        background-color: rgba(0, 0, 0, 0);
+        
+        position: absolute;
+        z-index: 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-text {
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 50%; 
+        transform: translateY(-50%);
+        color: #314758;
+        transition: opacity 0.25s ease;
+
+        margin-top: 55%;
+    }
+
+    .button-overlay {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .button-container:hover .button-text {
+        opacity: 1;
+    }
+
+    .button-container:hover .button-overlay {
+        opacity: 0.9;
+    }
+
+    @media (max-width: 1200px) {
         .image-map {
-            position: relative;
-            width: 25%;
-
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%);
+            width: 35%;
         }
-
-        img {
-            width: 100%;
-            height: auto;
+        body {
+            font-size: 7.5vh;
         }
-
-        .button-container {
-            width: 100%;
-            height: 100%;
+        h1 {
+            font-size: 8vw;
         }
+    }
 
-        .music-button {
-            left: 66%;
-            top: 5%;
-            width: 25%;
-            height: 44%;
-            background-color: rgba(0, 0, 0, 0);
-
-            position: absolute;
-            z-index: 1;
-            transition: background-color 0.3s ease;
+    @media (max-width: 767px) {
+        .image-map {
+            width: 55%;
         }
-
-        .film-button {
-            left: 30%;
-            top: 64%;
-            width: 60%;
-            height: 25%;
-            background-color: rgba(0, 0, 0, 0);
-
-            position: absolute;
-            z-index: 1;
-            transition: background-color 0.3s ease;
+        body {
+            font-size: 5.5vh;
         }
-
-        .support-button {
-            left: 0%;
-            top: 28%;
-            width: 30%;
-            height: 38%;
-            background-color: rgba(0, 0, 0, 0);
-
-            position: absolute;
-            z-index: 1;
-            transition: background-color 0.3s ease;
+        h1 {
+            font-size: 11vw;
         }
+    }
 
-        .thoughts-button {
-            left: 5%;
-            top: 8%;
-            width: 85%;
-            height: 85%;
-            background-color: rgba(0, 0, 0, 0);
-            
-            position: absolute;
-            z-index: 0;
-            transition: background-color 0.3s ease;
+    @media (max-width: 500px) {
+        .image-map {
+            width: 70%;
         }
-
-        .button-text {
-            text-align: center;
-            opacity: 0;
-            position: absolute;
-            width: 100%;
-            top: 50%; 
-            transform: translateY(-50%);
-            color: #314758;
-            transition: opacity 0.25s ease;
-
-            margin-top: 55%;
+        body {
+            font-size: 5vh;
         }
-
-        .button-overlay {
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.25s ease;
+        h1 {
+            font-size: 14vw;
         }
+    }
 
-        .button-container:hover .button-text {
-            opacity: 1;
-        }
-
-        .button-container:hover .button-overlay {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 1200px) {
-            .image-map {
-                width: 35%;
-            }
-            body {
-                font-size: 7.5vh;
-            }
-            h1 {
-                font-size: 8vw;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .image-map {
-                width: 55%;
-            }
-            body {
-                font-size: 5.5vh;
-            }
-            h1 {
-                font-size: 11vw;
-            }
-        }
-
-        @media (max-width: 500px) {
-            .image-map {
-                width: 70%;
-            }
-            body {
-                font-size: 5vh;
-            }
-            h1 {
-                font-size: 14vw;
-            }
-        }
-
-    </style>
+</style>
 </head>
 
 <body>

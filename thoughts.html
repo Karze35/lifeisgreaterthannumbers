@@ -3,6 +3,7 @@
 <head>
 <title>Thoughts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fade.css">
 <style>
     @font-face {
       font-family: 'UtzingerThree';
@@ -13,14 +14,13 @@
 			margin: 0;
 			padding: 0;
 			font-family: UtzingerThree;
-			background-color: #e7e9de;
+			background-color: #fdf7f0;
       margin-bottom: 300px;
 		}
 		
 		.header {
 			color: #314758;
 			padding: 20px;
-      margin-bottom: 4px;
 			text-align: center;
       line-height: 1;
 			font-size: 2.4vw;
@@ -28,6 +28,7 @@
       font-family: UtzingerThree;
       max-width: 68%;
       margin: 0 auto;
+      margin-bottom: 5%;
 		}
 		
 		.navigation {
@@ -100,10 +101,10 @@
     }
 
     .container img {
-      object-fit:contain;
+      object-fit: contain;
       display: block;
       width: 30%;
-      max-height: 350px;
+      max-height: 450px;
       margin: 0 auto;
       margin-bottom: 2vh;
     }
@@ -142,6 +143,7 @@
       top: 0; 
       left: 0;
       background-image: url(Assets/MissingAssets/Side\ Menu\ BG@2x.png);
+      filter: brightness(120%);
       background-size: cover;
       overflow-x: hidden; 
       padding-top: 20px;
@@ -151,9 +153,11 @@
     .sidebar a {
       padding: 6px 8px 6px 16px;
       text-decoration: none;
-      font-size: 35px;
+      font-size: 38px;
+      font-weight: 500;
       color: #fff;  
       display: block;
+      color: #354e60;
     }
 
     .sidebar a:hover {
@@ -161,9 +165,8 @@
     }
 
     .sidebar-img {
-      max-width: 100%;
+      width: 90px;
       height: auto;
-      margin-top: 20%;
     }
 
     .toggle-button {
@@ -231,6 +234,9 @@
       .sidebar a {
         font-size: 25px;
       }
+      .sidebar-img {
+        width: 60px;
+      }
       .container p {
         width: 90%;
         font-size: 3.5vw;
@@ -252,6 +258,10 @@
       .header {
         font-size: 5vw;
       }
+      .toggle-button {
+        top: 2%;
+        left: 2%;
+      }
     }
 
     @media (max-width: 560px) {
@@ -265,15 +275,15 @@
 <body>
   <button class="toggle-button" onclick="toggleSidebar()">&#9776;</button>
   <div class="sidebar">
-    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
     <a href="film.html">Film</a>
     <a href="thoughts.html">Thoughts</a>
     <a href="music.html">Music</a>
     <a href="support.html">Support</a>
-    <a></a>
-    <a></a>
-    <a></a>
-    <a></a>
+    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
     <a href="about.html">About</a>
     <a href="imagelibrary.html">Image Library</a>
     <a href="justforfun.html">Just For Fun</a>
