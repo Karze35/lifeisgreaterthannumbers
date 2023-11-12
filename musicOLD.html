@@ -89,52 +89,21 @@
 			margin-left: 10px;
 		}
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px; 
-    }
-
     .image-container {
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 120px;
       font-size: 36px;
       font-weight: normal;
-      width: calc(33.33% - 20px);
-    }
-
-    
-    @media (max-width: 767px) {
-      .image-container {
-        width: calc(80% - 20px); /* Adjust margin and width as needed for mobile */
-        flex-basis: 100%; /* Take up the full width of the column */
-      }
-      .image-container .overlay {
-        width: calc(80% - 20px);
-      }
-
-      .row {
-        flex-direction: column; /* Switch to a single column layout */
-        align-items: center;
-      }
-
-      .header {
-        font-size: 12vw;
-      }
+      width: 100%;
     }
 
     .image-container img {
       display: block;
-      width: 60%;
+      width: 30%;
       height: auto;
       transition: opacity 0.5s ease;
     }
@@ -152,8 +121,8 @@
       top: 33.8%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 60%;
-      height: auto;
+      width: 450px;
+      height: 450px;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0);
       color: #fff;
@@ -288,129 +257,93 @@
 
   <div class="main">
     <h1 class="header">music</h1>
-
+  
     <div class="gallery">
-      <div class="row">
 
-        <!-- Hope this Helps! -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/Hth@2x.png" alt="Hope this Helps!" class="gallery-image">
-          <div class="overlay">
-            <a href="https://open.spotify.com/album/1eFKnMFraZBKm39c3dAdu0?si=KZp4LIc_Ree0hKfujtSkaw " target="_blank"><p>listen now</p></a>
-          </div>
-          <div class="image-text">
-            <p>hope this helps!</p>
-            <p>album 2022</p>
-          </div>
-        </div> 
-    
-        <!-- moonriver v2 -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/moonriverv2.png" alt="moonriver v2" class="gallery-image">
-          <div class="overlay">
-            <a href="https://open.spotify.com/track/2rHlDfQB3eEjruCtIIxM9z?si=ef3b2d10f5a5490c " target="_blank"><p>listen now</p></a>
-          </div>
-          <div class="image-text">
-            <p>moonriver v2</p>
-            <p>single 2023</p>
-          </div>
-        </div> 
-    
-        <!-- Je t’aime -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/JE T'AIME@2x.png" alt="Je t’aime" class="gallery-image">
-          <div class="overlay">
-            <a href="https://open.spotify.com/track/0bqYbrHncPTC2gsk8LThXz?si=36abe668a9bf4322 " target="_blank"><p>listen now</p></a>
-          </div>
-          <div class="image-text">
-            <p>je t’aime</p>
-            <p>single 2022</p>
-          </div>
+      <!-- Hope this Helps! -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/Hth@2x.png" alt="Hope this Helps!" class="gallery-image">
+        <div class="overlay">
+          <a href="https://open.spotify.com/album/1eFKnMFraZBKm39c3dAdu0?si=KZp4LIc_Ree0hKfujtSkaw " target="_blank"><p>listen now</p></a>
+        </div>
+        <div class="image-text">
+          <p>hope this helps!</p>
+          <p>album 2022</p>
+        </div>
+      </div> 
 
-        </div> 
-      </div>
-    
-      <div class="row">
+      <!-- moonriver v2 -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/moonriverv2.png" alt="moonriver v2" class="gallery-image">
+        <div class="overlay">
+          <a href="https://open.spotify.com/track/2rHlDfQB3eEjruCtIIxM9z?si=ef3b2d10f5a5490c " target="_blank"><p>listen now</p></a>
+        </div>
+        <div class="image-text">
+          <p>moonriver v2</p>
+          <p>single 2023</p>
+        </div>
+      </div> 
 
-        <!-- Uncle Berry Bit It -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/UBBI.png" alt="Uncle Berry Bit It" class="gallery-image">
-          <div class="overlay">
-            <a href=""><p>link tbd</p></a>
-          </div>
-          <div class="image-text">
-            <p>uncle berry bit it</p>
-            <p>score 2023</p>
-          </div>
-        </div> 
-    
-        <!-- Hereafter Hometown -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/HH@2x.png" alt="Hereafter Hometown" class="gallery-image">
-          <div class="overlay">
-            <a href=""><p>link tbd</p></a>
-          </div>
-          <div class="image-text">
-            <p>hereafter hometown</p>
-            <p>score 2022</p>
-          </div>
-        </div> 
-    
-        <!-- Take 2 -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/Take 2@2x.png" alt="Take 2" class="gallery-image">
-          <div class="overlay">
-            <a href="https://open.spotify.com/album/3BaipkbAGZEBlPgNfYo89U?si=sh-TZN7kTSi9VbA4uAG1tw " target="_blank"><p>listen now</p></a>
-          </div>
-          <div class="image-text">
-            <p>take 2</p>
-            <p>ep 2022 (producer)</p>
-          </div>
+      <!-- Je t’aime -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/JE T'AIME@2x.png" alt="Je t’aime" class="gallery-image">
+        <div class="overlay">
+          <a href="https://open.spotify.com/track/0bqYbrHncPTC2gsk8LThXz?si=36abe668a9bf4322 " target="_blank"><p>listen now</p></a>
+        </div>
+        <div class="image-text">
+          <p>je t’aime</p>
+          <p>single 2022</p>
+        </div>
+      </div> 
 
-        </div> 
-      </div>
-    
-      <div class="row">
+      <!-- Uncle Berry Bit It -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/UBBI.png" alt="Uncle Berry Bit It" class="gallery-image">
+        <div class="overlay">
+          <a href=""><p>link tbd</p></a>
+        </div>
+        <div class="image-text">
+          <p>uncle berry bit it</p>
+          <p>score 2023</p>
+        </div>
+      </div> 
 
-        <!-- 10 count. -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/10count@2x.png" alt="10 count." class="gallery-image">
-          <div class="overlay">
-            <a href=""><p>link tbd</p></a>
-          </div>
-          <div class="image-text">
-            <p>10 count.</p>
-            <p>score 2021</p>
-          </div>
-        </div> 
+      <!-- Hereafter Hometown -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/HH@2x.png" alt="Hereafter Hometown" class="gallery-image">
+        <div class="overlay">
+          <a href=""><p>link tbd</p></a>
+        </div>
+        <div class="image-text">
+          <p>hereafter hometown</p>
+          <p>score 2022</p>
+        </div>
+      </div> 
 
-        <!-- 10 count. -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/music_img_placeholder.png" alt="10 count." class="gallery-image">
-          <div class="overlay">
-            <a href=""><p></p></a>
-          </div>
-          <div class="image-text">
-            <p>_</p>
-            <p>_</p>
-          </div>
-        </div> 
+      <!-- Take 2 -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/Take 2@2x.png" alt="Take 2" class="gallery-image">
+        <div class="overlay">
+          <a href="https://open.spotify.com/album/3BaipkbAGZEBlPgNfYo89U?si=sh-TZN7kTSi9VbA4uAG1tw " target="_blank"><p>listen now</p></a>
+        </div>
+        <div class="image-text">
+          <p>take 2</p>
+          <p>ep 2022 (producer)</p>
+        </div>
+      </div> 
 
-        <!-- 10 count. -->
-        <div class="image-container">
-          <img src="Assets/MusicImages/music_img_placeholder.png" alt="10 count." class="gallery-image">
-          <div class="overlay">
-            <a href=""><p></p></a>
-          </div>
-          <div class="image-text">
-            <p>_</p>
-            <p>_</p>
-          </div>
-        </div> 
+      <!-- 10 count. -->
+      <div class="image-container">
+        <img src="Assets/MusicImages/10count@2x.png" alt="10 count." class="gallery-image">
+        <div class="overlay">
+          <a href=""><p>link tbd</p></a>
+        </div>
+        <div class="image-text">
+          <p>10 count.</p>
+          <p>score 2021</p>
+        </div>
+      </div> 
 
-
-
-      </div>
     </div>
     
   </div>

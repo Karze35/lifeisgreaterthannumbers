@@ -88,19 +88,50 @@
 			margin-left: 10px;
 		}
 
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; 
+    }
+
     .image-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
       flex-direction: column;
+
+      width: calc(50% - 2px);
+    }
+
+    @media (max-width: 767px) {
+      .image-container {
+        width: calc(80% - 20px); /* Adjust margin and width as needed for mobile */
+        flex-basis: 100%; /* Take up the full width of the column */
+      }
+      .image-container .overlay {
+        width: calc(80% - 20px);
+      }
+
+      .row {
+        flex-direction: column; /* Switch to a single column layout */
+      }
+
+      .header {
+        font-size: 12vw;
+      }
     }
 
     .image-container img {
       display: inline;
-      width: 50%;
+      width: 70%;
       height: auto;
       transition: opacity 0.3s ease;
     }
@@ -127,8 +158,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 50%;
-      height: 100%;
+      width: 70%;
       opacity: 0;
       background-color: rgba(0, 0, 0, 0);
       color: #fff;
@@ -138,7 +168,7 @@
 
       max-width: 100%;
       max-height: 100%;
-      overflow-y: auto;
+      overflow-y: visible;
     }
 
     .image-container .overlay .image-link {
@@ -243,6 +273,13 @@
       }
     }
 
+    @media (max-width: 1000px) {
+      .image-text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
     @media (max-width: 767px) {
       .sidebar.open {
         width: 40%;
@@ -254,7 +291,7 @@
         width: 60px;
       }
       .image-text {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 20px;
       }
       .image-link {
@@ -296,220 +333,250 @@
 
   <div class="main">
     <h1 class="header">storytelling for the screen</h1>
-  
+
     <div class="gallery">
+      <div class="row">
 
-      <!-- Divined -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Divined.png" alt="Divined" class="img">
-        <div class="overlay">
-          <a href="" class="image-link">
-            <div class="image-text">
-              <p>divined</p>
-              <p>zerah must lead the last of the alkreic people to a true home away from the comfort of the star candar.</p>
-              <p>link tbd</p>
-            </div>
-          </a>
+        <!-- Divined -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Divined.png" alt="Divined" class="img">
+          <div class="overlay">
+            <a href="" class="image-link">
+              <div class="image-text">
+                <p>divined</p>
+                <p>zerah must lead the last of the alkreic people to a true home away from the comfort of the star candar.</p>
+                <p>link tbd</p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Godly boy -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Godly boy.png" alt="Godly boy" class="img">
+          <div class="overlay">
+            <a href="" class="image-link">
+              <div class="image-text">
+                <p>godly boy</p>
+                <p>renard, a high school freshman at an overnight summer camp must compare his religious upbringing with the surrounding standards of manhood.</p>
+                <p>link tbd</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Godly boy -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Godly boy.png" alt="Godly boy" class="img">
-        <div class="overlay">
-          <a href="" class="image-link">
-            <div class="image-text">
-              <p>godly boy</p>
-              <p>renard, a high school freshman at an overnight summer camp must compare his religious upbringing with the surrounding standards of manhood.</p>
-              <p>link tbd</p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- Unit_01 -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Unit_01.png" alt="Unit_01" class="img">
+          <div class="overlay">
+            <a href="" class="image-link">
+              <div class="image-text">
+                <p>unit_ 0 1</p>
+                <p>an obsessive inventor must choose between his relationship with his daughter and his dream to create the first-ever, all in one, autonomous, humanoid robot.</p>
+                <p>link tbd</p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- MOREWARD -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/MW image.jpeg" alt="MOREWARD" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/k4MxICZkz5o" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>moreward</p>
+                <p>moreward is a stop motion music video i created during covid to depict the reality of the vanities i found myself seeking, and the only truth i believe is worth pursuing.  </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Unit_01 -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Unit_01.png" alt="Unit_01" class="img">
-        <div class="overlay">
-          <a href="" class="image-link">
-            <div class="image-text">
-              <p>unit_ 0 1</p>
-              <p>an obsessive inventor must choose between his relationship with his daughter and his dream to create the first-ever, all in one, autonomous, humanoid robot.</p>
-              <p>link tbd</p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- Paul's Potato Shop -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Paul's Potato Soup.jpg" alt="Paul's Potato Shop" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/FAsG_3YmMos" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>paul's potato shop</p>
+                <p>kellie, the daughter of a simple soul by the name of paul, must come to terms with what is left of the man who raised her over a bowl of her father’s beautifully simplistic potato soup. </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- I Dance Too -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/I Dance too.png" alt="I Dance Too" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/-0j1tGC9ZMw" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>i dance too</p>
+                <p>the line between admiration and cooperation is fine. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- MOREWARD -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/MW image.jpeg" alt="MOREWARD" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/k4MxICZkz5o" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>moreward</p>
-              <p>moreward is a stop motion music video i created during covid to depict the reality of the vanities i found myself seeking, and the only truth i believe is worth pursuing.  </p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- Extraordinary & Young -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Extraordinary and Young..png" alt="Extraordinary & Young" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/bpTASsr7RRk" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>extraordinary and young</p>
+                <p>a car costs a lot more than the price signed at the dealership. </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Be You? -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Be You_.png" alt="Be You?" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/TSjQCpgGuY4" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>be you?</p>
+                <p>in a generation seeking identity without definition, it has become all the more difficult to define what it means to 'be you'. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Paul's Potato Shop -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Paul's Potato Soup.jpg" alt="Paul's Potato Shop" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/FAsG_3YmMos" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>paul's potato shop</p>
-              <p>kellie, the daughter of a simple soul by the name of paul, must come to terms with what is left of the man who raised her over a bowl of her father’s beautifully simplistic potato soup. </p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- Beautiful Boy - Scene -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Scene- Beautiful Boy..png" alt="Beautiful Boy - Scene" class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/bpTASsr7RRk" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>beautiful boy - scene</p>
+                <p>nic must decide whether or not the lonely road to sobriety is worth the torment. </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Lucy Can. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Lucy Can..png" alt="Lucy Can." class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/mt_WO0kipn4" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>lucy can.</p>
+                <p>there's no mountain top too tall for Lucy to climb, no matter what her disabilities may have to say. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- I Dance Too -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/I Dance too.png" alt="I Dance Too" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/-0j1tGC9ZMw" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>i dance too</p>
-              <p>the line between admiration and cooperation is fine. </p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- Lady Bird - Scene -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Scene- Lady Bird.png" alt="Lady Bird- Scene " class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/OmQTiYbdiok" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>lady bird - scene</p>
+                <p>lady bird, 'chrisinte', and her mother marion must face the inevitable: graduation is approaching, and lady bird isn't sticking around. </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Stand With. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Stand With..png" alt="Stand With."  class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/c0xkAoE54PU " target="_blank" class="image-link">
+              <div class="image-text">
+                <p>stand with.</p>
+                <p>microsoft takes a stand against systematic racism. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Extraordinary & Young -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Extraordinary and Young..png" alt="Extraordinary & Young" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/bpTASsr7RRk" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>extraordinary and young</p>
-              <p>a car costs a lot more than the price signed at the dealership. </p>
-            </div>
-          </a>
+      <div class="row">
+
+        <!-- For This. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/For This..png" alt="For This." class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/a4aXzEic5GU" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>for this.</p>
+                <p>love finds its way through oddities and around juice boxes. </p>
+              </div>
+            </a>
+          </div>
         </div>
+
+        <!-- Feeling Loved. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Feeling loved (image).png" alt="Feeling Loved." class="img">
+          <div class="overlay">
+            <a href="https://youtu.be/Eh51I9FS7CM" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>feeling loved.</p>
+                <p>love is both a sense and a feeling. </p>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Be You? -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Be You_.png" alt="Be You?" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/TSjQCpgGuY4" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>be you?</p>
-              <p>in a generation seeking identity without definition, it has become all the more difficult to define what it means to 'be you'. </p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <div class="row">
 
-      <!-- Beautiful Boy - Scene -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Scene- Beautiful Boy..png" alt="Beautiful Boy - Scene" class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/bpTASsr7RRk" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>beautiful boy - scene</p>
-              <p>nic must decide whether or not the lonely road to sobriety is worth the torment. </p>
-            </div>
-          </a>
+        <!-- MADE TO BE. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Made to be.png" alt="MADE TO BE." class="img">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=E1pKLaxVTUY " target="_blank" class="image-link">
+              <div class="image-text">
+                <p>made to be.</p>
+                <p>made to be is a music video about a highschool boy who takes the courageous step to look for self-value outside of the one assigned to him </p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <!-- Lucy Can. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Lucy Can..png" alt="Lucy Can." class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/mt_WO0kipn4" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>lucy can.</p>
-              <p>there's no mountain top too tall for Lucy to climb, no matter what her disabilities may have to say. </p>
-            </div>
-          </a>
+        <!-- LEAVING HOME. -->
+        <div class="image-container">
+          <img src="Assets/FilmImages/Leaving home.png" alt="LEAVING HOME." class="img">
+          <div class="overlay">
+            <a href="https://www.youtube.com/watch?v=MwP5Mb1XTlI" target="_blank" class="image-link">
+              <div class="image-text">
+                <p>leaving home.</p>
+                <p>leaving home is a personal documentary of me and my best friend saying farewell to home</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <!-- Lady Bird - Scene -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Scene- Lady Bird.png" alt="Lady Bird- Scene " class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/OmQTiYbdiok" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>lady bird - scene</p>
-              <p>lady bird, 'chrisinte', and her mother marion must face the inevitable: graduation is approaching, and lady bird isn't sticking around. </p>
-            </div>
-          </a>
-        </div>
       </div>
-
-      <!-- Stand With. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Stand With..png" alt="Stand With."  class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/c0xkAoE54PU " target="_blank" class="image-link">
-            <div class="image-text">
-              <p>stand with.</p>
-              <p>microsoft takes a stand against systematic racism. </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- For This. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/For This..png" alt="For This." class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/a4aXzEic5GU" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>for this.</p>
-              <p>love finds its way through oddities and around juice boxes. </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Feeling Loved. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Feeling loved (image).png" alt="Feeling Loved." class="img">
-        <div class="overlay">
-          <a href="https://youtu.be/Eh51I9FS7CM" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>feeling loved.</p>
-              <p>love is both a sense and a feeling. </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- MADE TO BE. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Made to be.png" alt="MADE TO BE." class="img">
-        <div class="overlay">
-          <a href="https://www.youtube.com/watch?v=E1pKLaxVTUY " target="_blank" class="image-link">
-            <div class="image-text">
-              <p>made to be.</p>
-              <p>made to be is a music video about a highschool boy who takes the courageous step to look for self-value outside of the one assigned to him </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- LEAVING HOME. -->
-      <div class="image-container">
-        <img src="Assets/FilmImages/Leaving home.png" alt="LEAVING HOME." class="img">
-        <div class="overlay">
-          <a href="https://www.youtube.com/watch?v=MwP5Mb1XTlI" target="_blank" class="image-link">
-            <div class="image-text">
-              <p>leaving home.</p>
-              <p>leaving home is a personal documentary of me and my best friend saying farewell to home</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
     </div>
 
   </div>
