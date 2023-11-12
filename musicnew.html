@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="fade.css">
+<style>
+    @font-face {
+      font-family: 'UtzingerThree';
+      src: url(Assets/UtzingerThree.otf) format('opentype');
+    }
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: UtzingerThree;
+			background-color: #314c58;
+      margin-bottom: 300px;
+		}
+		
+		.header {
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 5vw;
+      font-weight: normal;
+      font-family: UtzingerThree;
+      margin-bottom: 20px;
+      margin-top: 10px;
+		}
+		
+		.navigation {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #747474;
+			padding: 20px;
+			position: relative;
+			bottom: 0;
+			left: 20px;
+			right: 0;
+		}
+
+		.navigation > div {
+			display: flex;
+			align-items: center;
+			flex-grow: 1;
+			flex-basis: 0;
+			justify-content: center;
+			font-size: 20px;
+		}
+
+		.navigation > div:first-child {
+			justify-content: flex-start;
+		}
+
+		.navigation > div:last-child {
+			justify-content: flex-end;
+		}
+
+		.navigation a {
+			color: #fff;
+			text-decoration: none;
+			padding: 10px;
+			margin: 10px;
+			transition: all 0.3s ease-in-out;
+			border: 2px solid transparent;
+			border-radius: 5px;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		.navigation a:hover {
+			background-color: #fff;
+			color: #333;
+			border-color: #333;
+		}
+
+		.navigation img {
+			max-width: 30px;
+			max-height: 30px;
+			margin-right: 10px;
+		}
+
+		.navigation small {
+			font-size: 12px;
+			color: #fff;
+			margin-left: 10px;
+		}
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px; 
+    }
+
+    .image-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      font-weight: normal;
+      width: calc(33.33% - 20px);
+    }
+
+    
+    @media (max-width: 767px) {
+      .image-container {
+        width: calc(80% - 20px); /* Adjust margin and width as needed for mobile */
+        flex-basis: 100%; /* Take up the full width of the column */
+      }
+      .image-container .overlay {
+        width: calc(50% - 20px);
+      }
+
+      .row {
+        flex-direction: column; /* Switch to a single column layout */
+        align-items: center;
+      }
+
+      .header {
+        font-size: 12vw;
+      }
+    }
+
+    .image-container img {
+      display: block;
+      width: 60%;
+      height: auto;
+      transition: opacity 0.5s ease;
+    }
+
+    .image-container:hover img {
+      opacity: 0.25; /* Set the desired opacity for the image on hover */
+    }
+
+    .image-container .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 33.8%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      height: auto;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0);
+      color: #fff;
+      text-align: center;
+      padding-top: 0%;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      letter-spacing: 2px;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .image-container .overlay a {
+      text-decoration: none;
+      color: white; 
+      font-size: 50px;
+    }
+
+    .image-container .image-text {
+      font-size: 30px;
+      line-height: 15px;
+      letter-spacing: 2px;
+      margin-top: 5px;
+      text-align: center;
+      color:#fff;
+    }
+
+    .sidebar {
+      height: 100%; 
+      width: 200px; 
+      position: fixed; 
+      z-index: 1; 
+      top: 0; 
+      left: 0;
+      background-image: url(Assets/MissingAssets/Side\ Menu\ BG@2x.png);
+      filter: brightness(120%);
+      background-size: cover;
+      overflow-x: hidden; 
+      padding-top: 20px;
+      transition: linear width 0.15s;
+    }
+
+    .sidebar a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 38px;
+      font-weight: 500;
+      display: block;
+      color: #354e60;
+    }
+
+    .sidebar a:hover {
+      color: white; 
+    }
+
+    .sidebar-img {
+      width: 90px;
+      height: auto;
+    }
+
+    .toggle-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 40px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .sidebar.open {
+      width: 300px; 
+    }
+
+    .sidebar:not(.open) {
+      width: 0;
+      overflow: hidden;
+    }
+
+    .main {
+      padding: 0px 10px;
+    }
+
+    .image-text {
+      position: relative;
+      display: inline-block;
+      
+    }
+
+    @media (max-width: 767px) {
+      .sidebar.open {
+        width: 40%;
+      }
+      .sidebar a {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .sidebar-img {
+        width: 60px;
+      }
+      .image-container img {
+        width: 60%;
+      }
+      .header {
+        font-size: 12vw;
+      }
+    }
+
+</style>
+</head>
+<body>
+  <button class="toggle-button" onclick="toggleSidebar()">&#9776;</button>
+  <div class="sidebar">
+    <a></a>
+    <a></a>
+    <a></a>
+    <a></a>
+    <a href="film.html">Film</a>
+    <a href="thoughts.html">Thoughts</a>
+    <a href="music.html">Music</a>
+    <a href="support.html">Support</a>
+    <a href="nav1.html"><img src="Assets/BrandingElements/LGN_trademarked logos-10.png" alt="..." class="sidebar-img"></a>
+    <a href="about.html">About</a>
+    <a href="imagelibrary.html">Image Library</a>
+    <a href="justforfun.html">Just For Fun</a>
+  </div>
+
+  <div class="main">
+    <h1 class="header">music</h1>
+
+    <div class="gallery">
+      <div class="row">
+
+        <!-- Hope this Helps! -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/Hth@2x.png" alt="Hope this Helps!" class="gallery-image">
+          <div class="overlay">
+            <a href="https://open.spotify.com/album/1eFKnMFraZBKm39c3dAdu0?si=KZp4LIc_Ree0hKfujtSkaw " target="_blank"><p>listen now</p></a>
+          </div>
+          <div class="image-text">
+            <p>hope this helps!</p>
+            <p>album 2022</p>
+          </div>
+        </div> 
+    
+        <!-- moonriver v2 -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/moonriverv2.png" alt="moonriver v2" class="gallery-image">
+          <div class="overlay">
+            <a href="https://open.spotify.com/track/2rHlDfQB3eEjruCtIIxM9z?si=ef3b2d10f5a5490c " target="_blank"><p>listen now</p></a>
+          </div>
+          <div class="image-text">
+            <p>moonriver v2</p>
+            <p>single 2023</p>
+          </div>
+        </div> 
+    
+        <!-- Je t’aime -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/JE T'AIME@2x.png" alt="Je t’aime" class="gallery-image">
+          <div class="overlay">
+            <a href="https://open.spotify.com/track/0bqYbrHncPTC2gsk8LThXz?si=36abe668a9bf4322 " target="_blank"><p>listen now</p></a>
+          </div>
+          <div class="image-text">
+            <p>je t’aime</p>
+            <p>single 2022</p>
+          </div>
+
+        </div> 
+      </div>
+    
+      <div class="row">
+
+        <!-- Uncle Berry Bit It -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/UBBI.png" alt="Uncle Berry Bit It" class="gallery-image">
+          <div class="overlay">
+            <a href=""><p>link tbd</p></a>
+          </div>
+          <div class="image-text">
+            <p>uncle berry bit it</p>
+            <p>score 2023</p>
+          </div>
+        </div> 
+    
+        <!-- Hereafter Hometown -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/HH@2x.png" alt="Hereafter Hometown" class="gallery-image">
+          <div class="overlay">
+            <a href=""><p>link tbd</p></a>
+          </div>
+          <div class="image-text">
+            <p>hereafter hometown</p>
+            <p>score 2022</p>
+          </div>
+        </div> 
+    
+        <!-- Take 2 -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/Take 2@2x.png" alt="Take 2" class="gallery-image">
+          <div class="overlay">
+            <a href="https://open.spotify.com/album/3BaipkbAGZEBlPgNfYo89U?si=sh-TZN7kTSi9VbA4uAG1tw " target="_blank"><p>listen now</p></a>
+          </div>
+          <div class="image-text">
+            <p>take 2</p>
+            <p>ep 2022 (producer)</p>
+          </div>
+
+        </div> 
+      </div>
+    
+      <div class="row">
+
+        <!-- 10 count. -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/10count@2x.png" alt="10 count." class="gallery-image">
+          <div class="overlay">
+            <a href=""><p>link tbd</p></a>
+          </div>
+          <div class="image-text">
+            <p>10 count.</p>
+            <p>score 2021</p>
+          </div>
+        </div> 
+
+        <!-- 10 count. -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/music_img_placeholder.png" alt="10 count." class="gallery-image">
+          <div class="overlay">
+            <a href=""><p></p></a>
+          </div>
+          <div class="image-text">
+            <p>_</p>
+            <p>_</p>
+          </div>
+        </div> 
+
+        <!-- 10 count. -->
+        <div class="image-container">
+          <img src="Assets/MusicImages/music_img_placeholder.png" alt="10 count." class="gallery-image">
+          <div class="overlay">
+            <a href=""><p></p></a>
+          </div>
+          <div class="image-text">
+            <p>_</p>
+            <p>_</p>
+          </div>
+        </div> 
+
+
+
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>  
+
+
+    
