@@ -15,7 +15,6 @@
 			padding: 0;
 			font-family: UtzingerThree;
 			background-color: #fdf7f0;
-      margin-bottom: 300px;
 		}
 		
 		.header {
@@ -31,13 +30,14 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			background-color: #747474;
+			background-color: #adadad;
 			padding: 20px;
-			position:relative;
+			position: relative;
 			bottom: 0;
-			left: -15px;
 			right: 0;
-      width: 100%;
+
+      border-style: solid;
+      margin-top: 200px;
 		}
 
 		.navigation > div {
@@ -46,7 +46,7 @@
 			flex-grow: 1;
 			flex-basis: 0;
 			justify-content: center;
-			font-size: 20px;
+			font-size: 2vw;
 		}
 
 		.navigation > div:first-child {
@@ -58,16 +58,16 @@
 		}
 
 		.navigation a {
-			color: #fff;
+			color: #000000;
 			text-decoration: none;
-			padding: 10px;
-			margin: 10px;
+			padding: 3vh;
+			margin: 20px;
 			transition: all 0.3s ease-in-out;
 			border: 2px solid transparent;
 			border-radius: 5px;
 			font-weight: bold;
 			text-transform: uppercase;
-			font-size: 14px;
+			font-size: 1.5vw;
 		}
 
 		.navigation a:hover {
@@ -181,6 +181,13 @@
       }
     }
 
+    @media (max-width: 1000px) {
+      .navigation a {
+        font-size: 2.3vw;
+        padding: 0.5vh;
+      }
+    }
+
     @media (max-width: 767px) {
       .sidebar.open {
         width: 40%;
@@ -198,6 +205,9 @@
       .toggle-button {
         top: 2%;
         left: 2%;
+      }
+      .navigation {
+        display: none;
       }
     }
 
@@ -321,6 +331,27 @@ pain point you to hate?
     </p>
     
   </div>
+
+  <div class="navigation">
+    <div class="nav-segment">
+      <p class="nav-text">Life > Numbers</p>
+    </div>
+    <div class="nav-segment">
+      <a href="film.html"><p class="nav-text nav-active">film</p></a>
+      <a href="music.html"><p class="nav-text">music</p></a>
+      <a href="thoughts.html"><p class="nav-text">thoughts</p></a>
+      <a href="support.html"><p class="nav-text">support</p></a>
+    </div>
+    <div class="nav-segment">
+      <a href="about.html"><p class="nav-text">about</p></a>
+      <a href="imagelibrary.html"><p class="nav-text">image library</p></a>
+      <a href="justforfun.html"><p class="nav-text">fun</p></a>
+    </div>
+    <div class="nav-segment">
+      <p class="nav-text">© 2022 all rights reserved</p>
+    </div>
+  </div>
+
   <script>
     function toggleSidebar() {
       var sidebar = document.querySelector('.sidebar');
